@@ -1,0 +1,711 @@
+@charset "UT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+/*---------------------------------------
+    GERAL               
+-----------------------------------------*/
+
+::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--cor4);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--cor1);
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.correcao{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+:root {
+  /*
+  --cor1:                 #40231d;
+  --cor2:                 #8C4A3B;
+  --cor3:                 #595843;
+  --cor4:                 #BF6060;
+  --cor5:                 #F2D8CE;
+
+  --cor1:                 #313E40;
+  --cor2:                 #B1E0E5;
+  --cor3:                 #B0DFE5;
+  --cor4:                 #627C7F;
+  --cor5:                 #C4F8FF;
+
+
+  --cor1:                 #3B3B40;
+  --cor2:                 #88898C;
+  --cor3:                 #426A8C;
+  --cor4:                 #0D0D0D;
+  --cor5:                 #6997BF;*/
+
+  --cor1:                 #40231d;
+  --cor2:                 #8C4A3B;
+  --cor3:                 #595843;
+  --cor4:                 #6d2e2e;
+  --cor5:                 #F2D8CE;
+
+
+  --fontegeral:           'Signika Negative';
+}
+
+
+
+
+body {
+  font-family: var(--fontegeral);
+  color: black;
+}
+
+
+/*---------------------------------------
+    TIPOGRAFIA             
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: var(--font-weight-thin);
+  line-height: normal;
+}
+
+h1 {
+  color: var(--cor5);
+  font-size: 42pt;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 36pt;
+  font-weight: bold;
+  letter-spacing: -2px;
+  color: var(--cor5);
+}
+
+h2.AboutUs{
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 24pt;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: var(--cor4);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  color: var(--gray-color);
+  font-size: var(--h6-font-size);
+  line-height: inherit;
+  margin: 0;
+  color: var(--cor5);
+}
+
+p {
+  color: var(--cor5);
+  font-size: 15pt;
+  font-weight: normal;
+}
+
+b, 
+strong {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+}
+
+.section {
+  padding: 80px;
+}
+
+.c-out{
+  color: var(--cor1);
+}
+
+/* BOTÕES */
+
+.custom-btn {
+  background: transparent;
+  border-radius: var(--border-radius-small);
+  padding: 14px 24px;
+  color: var(--white-color);
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  color: var(--primary-color);
+}
+
+.custom-btn:focus {
+  box-shadow: none;
+}
+
+.custom-btn.bordered:hover,
+.custom-btn.bordered:focus,
+
+.custom-btn.bg-color:hover,
+.custom-btn.bg-color:focus {
+  background: var(--white-color);
+  border-color: transparent;
+  color: var(--primary-color);
+}
+
+.bordered {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.bg-color {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.about .fa{
+  color: var(--cor1);
+}
+
+.about .fa:hover,
+.Ffooter .fa:hover {
+  color: var(--cor4);
+}
+
+.Ffooter .fa {
+  color: var(--cor5);
+}
+
+.btn-one{
+  font-size: 13pt;
+  color: var(--cor5);
+  border: 1px solid var(--cor4);
+  border-radius: 25px;
+  background-color: var(--cor4);
+}
+
+.btn-one:hover{
+  color: var(--cor4);
+  border: 1px solid var(--cor4);
+}
+
+.btn-two{
+  font-size: 13pt;
+  color: var(--cor4);
+  border: 1px solid var(--cor4);
+  border-radius: 25px;
+}
+
+.btn-two:hover{
+  color: var(--cor5);
+  border: 1px solid var(--cor5);
+}
+
+.btn-three{
+  font-size: 13pt;
+  color: var(--cor5);
+  border: 1px solid var(--cor5);
+  border-radius: 25px;
+}
+
+.btn-three:hover{
+  color: var(--cor4);
+  border: 1px solid var(--cor4);
+}
+
+/*---------------------------------------
+    MODAL              
+-----------------------------------------*/
+
+.modal-content {
+  padding: 2rem 3rem;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  border: 0;
+  padding: 0;
+}
+
+.membership-form a {
+  color: var(--primary-color);
+}
+
+
+/*---------------------------------------
+  RESERVA    
+-----------------------------------------*/
+
+.feature {
+  background: var(--cor1);
+  padding: 5rem 0;
+}
+
+
+/*---------------------------------------
+    MENU             
+-----------------------------------------*/
+
+.navbar {
+  background: var(--cor1);
+  padding: 1rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.navbar-brand {
+  color: var(--cor5);
+  font-size: 20pt;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.navbar-brand:hover{
+  color: var(--cor4);
+}
+
+.nav-item .nav-link {
+  display: block;
+  color: var(--cor5);
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  padding: 2px 6px;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: var(--cor4);
+}
+
+.navbar .social-icon li a {
+  color: var(--white-color);
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  width: 30px;
+  height: 35px;
+  outline: none;
+  color: #B1E0E5;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background: var(--cor5);
+  transition: background 10ms 300ms ease;
+  display: block;
+  width: 30px;
+  height: 2px;
+  position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: var(--cor5);
+  width: 30px;
+  height: 2px;
+  content: '';
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/*---------------------------------------
+    FOTO MENU FUNDO          
+-----------------------------------------*/
+.tt{
+  background-color: rgba(0, 0, 0, 0.253);
+
+}
+.hero {
+  background-image: url('../images/menurestaurante.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+/*---------------------------------------
+    RECEITAS           
+-----------------------------------------*/
+
+.class-info{
+  background: var(--cor5);
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.445);
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 20px;
+  position: relative;
+  transition-duration: 1s, 1s;
+}
+
+.class-info-coppy {
+  background: var(--cor1);
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.445);
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 20px;
+  position: relative;
+  transition-duration: 1s, 1s;
+}
+
+.img-fluid{
+  border-radius: 10px 10px 0px 0px;
+  transition-duration: 1s, 1s;
+}
+
+.img-fluid:hover{
+  border-radius: 0px 0px 0px 0px;
+}
+
+.class-info:hover,
+.class-info-coppy:hover{
+  border-radius: 0px 0px 0px 0px;
+}
+
+.food{
+  background-color: var(--cor5);
+}
+
+.schedule {
+  background: var(--cor1);
+}
+
+.rborder{
+  border-radius: 15px;
+}
+
+.schedule-table {
+  display: table;
+  border: 0;
+  text-align: center;
+}
+
+.schedule-table strong,
+.schedule-table span {
+  display: block;
+  text-align: center;
+}
+
+.schedule-table strong {
+  color: var(--white-color);
+}
+
+.schedule-table span {
+  color: var(--gray-color);
+}
+
+.schedule-table span,
+.schedule-table small {
+  font-size: var(--menu-font-size);
+  text-transform: uppercase;
+}
+
+.schedule-table small {
+  position: relative;
+  top: 10px;
+}
+
+.table .thead-light th,
+.schedule-table tr td:first-child {
+  background: var(--primary-color);
+  border: 1px solid #212122;
+  color: var(--white-color);
+}
+
+.schedule-table .thead-light th {
+  border-bottom: 0;
+  text-transform: uppercase;
+}
+
+.table-bordered td, 
+.table-bordered th {
+  border: 1px solid #212122;
+}
+
+.table-bordered td {
+  padding-bottom: 22px;
+}
+
+.table td, .table th {
+  padding: 1rem;
+}
+
+.about {
+  background: var(--cor5);
+}
+
+
+.DivFuncionamento {
+  border-left: 2px solid var(--cor5);
+  padding-left: 3.5rem;
+}
+
+.DivFuncionamento strong {
+  color: var(--white-color);
+  opacity: 0.85;
+}
+
+.team-c {
+  position: relative;
+}
+
+.team-c img{
+  background: var(--cor5);
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.568);
+  max-height: 300px;
+  width: 100%;
+}
+
+.team-info {
+  background: var(--cor5);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.568);
+  padding: 20px;
+  position: relative;
+}
+
+.team-info span {
+  font-weight: var(--font-weight-light);
+  opacity: 0.85;
+}
+
+.team-info .social-icon {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.team-info .social-icon li {
+  display: block;
+}
+
+
+/*---------------------------------------
+    CONTATO             
+-----------------------------------------*/
+
+.webform input,
+button#submit-button {
+  height: calc(2.25rem + 20px);
+}
+
+.form-control {
+  margin: 15px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--dark-color);
+}
+
+button#submit-button {
+  background: var(--cor4);
+  border-color: transparent;
+  color: var(--cor5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#submit-button:hover {
+  background: var(--cor1);
+}
+
+.contact h2 + p {
+  max-width: 90%;
+}
+
+.google-map {
+  border-top: 2px solid var(--cor1);
+  padding-top: 22px;
+}
+
+.google-map iframe {
+  width: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
+  transition-duration: 1s, .5s;
+}
+
+.google-map iframe:hover {
+  scale: 1.05;
+  border-radius: 0;
+}
+
+.contact{
+  background-color: var(--cor5);
+}
+
+/*---------------------------------------
+    FOOTER              
+-----------------------------------------*/
+
+.Ffooter {
+  border-top: 1px solid #efebeb;
+  padding: 3rem 0;
+  background-color: var(--cor1);
+}
+
+.Ffooter a {
+  color: var(--p-color);
+  font-weight: var(--font-weight-light);
+}
+
+.Ffooter p {
+  font-size: var(--base-font-size);
+}
+
+
+/*---------------------------------------
+    SOCIAL ICON              
+-----------------------------------------*/
+
+.social-icon {
+  position: relative;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.social-icon li {
+  display: inline-block;
+  rborder-style: none;
+}
+
+.social-icon li a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.social-icon li a:hover {
+  color: var(--primary-color);
+}
+
+
+/*---------------------------------------
+    RESPONSIVO           
+-----------------------------------------*/
+
+@media screen and (max-width: 992px) {
+
+  .section {
+    padding: 45px;
+  }
+
+  .nav-item .nav-link {
+    padding: 6px;
+  }
+
+  .navbar .social-icon {
+    margin-top: 22px;
+  }
+
+  .navbar-collapse,
+  .Ffooter {
+    text-align: center;
+  }
+
+  .schedule-table {
+    display: block;
+  }
+
+  .modal-content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .DivFuncionamento {
+    border-left: 0;
+    padding: 22px 0 0 0;
+  }
+
+  h2 span {
+    display: block;
+  }
+}
